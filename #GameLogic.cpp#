@@ -20,12 +20,11 @@ GameLogic::GameLogic(DiceRoll _d):_dice(_d){
   //implement some kind of logic that can list all the possibilities
   //and take a choice as an argument but thats sort of for the CLI but then its not
   ///count is for rolling dice logic not tracking held dice
-  
   Max( _dice, count);
   Multiple( _dice, count);
   Straight( _dice, count);
   Pairs( _dice, count);
-
+  
 }
 
 //simply adds up all the 1s and 5s

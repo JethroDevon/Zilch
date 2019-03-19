@@ -15,6 +15,7 @@
  no score situation (aka a zilch).
 
 */
+
 #include <string>
 #include "DrawDice.cpp"
 #include "DiceRoll.cpp"
@@ -24,29 +25,30 @@ class GameLogic{
   bool zilched;
   DrawDice dd;
   int selected, totalscore;
+  DiceRoll _dice;
   
  public:
 
-  GameLogic();
+ GameLogic(DiceRoll _d);
 
   //aggregate of 1s and fives
-  int Max( int*, int);
+  int Max( DiceRoll, int);
 
   //this function detects a sequence from 1 to 6
-  int Straight( int*, int);
+  int Straight( DiceRoll, int);
 
   //this function detects any three pairs
-  int Pairs( int*, int);
+  int Pairs( DiceRoll, int);
   
   //this function identifies multiple dice scores
   //by detecting 3 to 5 of a kind. else returns -1
-  int Multiple( int*, int);
+  int Multiple( DiceRoll, int);
  
   //detects if roll of six dice come up with no score
-  int Nothing( int*, int);
+  int Nothing( DiceRoll, int);
 
   //asks the user to input
-  int Choice( int*, int);
+  int Choice( DiceRoll, int);
 };
 
 

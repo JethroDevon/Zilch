@@ -23,5 +23,5 @@ DiceRoll dr;
 int main(){
 
   dr.Roll();
-  GameLogic gl( dr.dice, dr.held);
+  GameLogic gl( dr);
 }
